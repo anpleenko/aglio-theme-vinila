@@ -1,6 +1,6 @@
 {
   "name": "aglio-theme-vinila",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Custom theme for the Aglio API Blueprint renderer",
   "main": "lib/main.js",
   "scripts": {
