@@ -5,9 +5,9 @@ mixin Badge(method)
         when 'GET'
             span.badge.get: include icons/arrow-down.jade
         when 'HEAD'
-            span.badge.head: i.fa.fa-info-circle
+            span.badge.head: include icons/info.jade
         when 'OPTIONS'
-            span.badge.options: i.fa.fa-dot-circle-o
+            span.badge.options: include icons/target.jade
         when 'POST'
             span.badge.post: include icons/plus.jade
         when 'PUT'
@@ -17,8 +17,8 @@ mixin Badge(method)
         when 'DELETE'
             span.badge.delete: include icons/close.jade
         default
-            span.badge: i.fa.fa-dot-circle-o
-
+            span.badge: include icons/target.jade
+            
 mixin Nav()
     //- Draw a navigation bar, which includes links to individual
     //- resources and actions.

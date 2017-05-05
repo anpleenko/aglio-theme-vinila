@@ -317,7 +317,7 @@ nav {
 }
 
 .badge {
-    display: inline-block;
+    // display: inline-block;
     float: right;
     min-width: 10px;
     min-height: @font-size;
@@ -361,6 +361,11 @@ nav {
     &.delete {
       color: @delete-badge-text-color;
       background-color: @delete-background-color;
+    }
+
+    svg{
+      display: inline-block;
+      vertical-align: middle;
     }
 }
 
