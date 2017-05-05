@@ -251,8 +251,8 @@ nav {
             font-size: @font-size;
             color: fade(@text-color, 70%);
             padding: (2 * @padding / 3) @padding;
-            border-top: 1px solid @group-border-color;
-            border-left: 2px solid transparent;
+            // border-top: 1px solid @group-border-color;
+            border-left: 1px solid transparent;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -261,7 +261,7 @@ nav {
             &:hover {
               text-decoration: @nav-hover-text-decoration;
               background-color: @nav-hover-background-color;
-              border-left: 2px solid @nav-hover-border-color;
+              border-color: @nav-hover-border-color;
             }
         }
 
@@ -336,37 +336,37 @@ nav {
 
     &.get {
       // color: @get-badge-text-color;
-      background-color: @get-background-color;
+      // background-color: @get-background-color;
     }
 
     &.head {
       // color: @head-badge-text-color;
-      background-color: @head-background-color;
+      // background-color: @head-background-color;
     }
 
     &.options {
       // color: @options-badge-text-color;
-      background-color: @options-background-color;
+      // background-color: @options-background-color;
     }
 
     &.put {
       // color: @put-badge-text-color;
-      background-color: @put-background-color;
+      // background-color: @put-background-color;
     }
 
     &.patch {
       // color: @patch-badge-text-color;
-      background-color: @patch-background-color;
+      // background-color: @patch-background-color;
     }
 
     &.post {
       // color: @post-badge-text-color;
-      background-color: @post-background-color;
+      // background-color: @post-background-color;
     }
 
     &.delete {
       // color: @delete-badge-text-color;
-      background-color: @delete-background-color;
+      // background-color: @delete-background-color;
     }
 
     svg{
@@ -680,14 +680,14 @@ nav {
     border-top-right-radius: 3px;
 }
 
-.resource-group {
+ {
     padding: @group-padding;
     margin-bottom: @padding;
     background-color: @group-background-color;
     border: 1px solid @group-border-color;
     border-radius: @border-radius;
 
-    h2.group-heading, .heading a {
+    h2.group-heading {
         padding: @group-padding;
         margin: @group-header-margin;
         background-color: @group-title-background-color;
@@ -699,9 +699,22 @@ nav {
         text-overflow: ellipsis;
         overflow: hidden;
     }
+
+    .heading a {
+        padding: @group-padding;
+        margin: @group-header-margin;
+        // background-color: @group-title-background-color;
+        // border-bottom: 1px solid @group-border-color;
+        // border-top-left-radius: @border-radius;
+        // border-top-right-radius: @border-radius;
+
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
 }
 
-.triple .content .resource-group {
+.triple .content  {
     padding: 0;
     border: none;
 
@@ -715,6 +728,7 @@ nav .resource-group{
   .heading a {
     padding: @padding;
     margin-bottom: 0;
+    font-weight: 800;
   }
 
   .collapse-content {

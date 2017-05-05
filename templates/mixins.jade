@@ -11,11 +11,11 @@ mixin Badge(method)
         when 'POST'
             span.badge.post: include icons/plus.jade
         when 'PUT'
-            span.badge.put: include icons/pencil.jade
+            span.badge.put: include icons/edit.jade
         when 'PATCH'
             span.badge.patch: include icons/pencil.jade
         when 'DELETE'
-            span.badge.delete: include icons/close.jade
+            span.badge.delete: include icons/delete.jade
         default
             span.badge: include icons/target.jade
 
@@ -26,7 +26,7 @@ mixin Nav()
         if self.api.navItems && self.api.navItems.length
             .resource-group
                 .heading
-                  .chevron
+                  //- .chevron
                     include icons/chevron-down.jade
                   a(href='#top') Overview
                 .collapse-content
@@ -36,7 +36,7 @@ mixin Nav()
         each resourceGroup in self.api.resourceGroups || []
             .resource-group
                 .heading
-                  .chevron
+                  //- .chevron
                     include icons/chevron-down.jade
                   a(href=resourceGroup.elementLink)!= resourceGroup.name || 'Resource Group'
                 .collapse-content
