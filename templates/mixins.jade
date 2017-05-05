@@ -3,7 +3,7 @@ mixin Badge(method)
     //- Draw a badge for a given HTTP method
     case method
         when 'GET'
-            span.badge.get: i.fa.fa-arrow-down
+            span.badge.get: include icons/arrow-down.jade
         when 'HEAD'
             span.badge.head: i.fa.fa-info-circle
         when 'OPTIONS'
