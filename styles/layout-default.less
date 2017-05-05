@@ -748,6 +748,10 @@ nav .resource-group{
     border: 1px solid transparent;
     border-radius: @border-radius;
 
+    .action > * + * {
+      margin-top: 10px;
+    }
+
     h4.action-heading {
         padding: @padding / 2 @padding;
         margin: -@padding -@padding @padding -@padding;
@@ -806,7 +810,8 @@ nav .resource-group{
 
         code {
             color: @title-code-text-color;
-            background-color: @title-code-background-color;
+            background-color: #fff;
+            // background-color: @title-code-background-color;
             border-color: @title-code-border-color;
             font-weight: normal;
             word-break: break-all;
@@ -816,13 +821,18 @@ nav .resource-group{
     }
 
     dl.inner {
-      padding-bottom: 2px;
+      // padding-bottom: 2px;
+      margin: 0;
+
+      > * + * {
+        margin-top: 8px;
+      }
     }
 
     .title {
-        border-bottom: 1px solid @group-background-color;
-        margin: 0 -@padding -1px -@padding;
-        padding: @padding;
+        // border-bottom: 1px solid @group-background-color;
+        // margin: 0 -@padding -1px -@padding;
+        // padding: @padding;
     }
 
     &.get {
