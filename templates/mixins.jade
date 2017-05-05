@@ -9,13 +9,13 @@ mixin Badge(method)
         when 'OPTIONS'
             span.badge.options: i.fa.fa-dot-circle-o
         when 'POST'
-            span.badge.post: i.fa.fa-plus
+            span.badge.post: include icons/plus.jade
         when 'PUT'
-            span.badge.put: i.fa.fa-pencil
+            span.badge.put: include icons/pencil.jade
         when 'PATCH'
-            span.badge.patch: i.fa.fa-pencil
+            span.badge.patch: include icons/pencil.jade
         when 'DELETE'
-            span.badge.delete: i.fa.fa-times
+            span.badge.delete: include icons/close.jade
         default
             span.badge: i.fa.fa-dot-circle-o
 
