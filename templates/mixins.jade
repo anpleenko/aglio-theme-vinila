@@ -28,7 +28,7 @@ mixin Nav()
                 .heading
                   //- .chevron
                     include icons/chevron-down.jade
-                  span Overview
+                  a(href='#top') Overview
                 .collapse-content
                   ul: each item in self.api.navItems
                     li
@@ -38,7 +38,7 @@ mixin Nav()
                 .heading
                   //- .chevron
                     include icons/chevron-down.jade
-                  span!= resourceGroup.name || 'Resource Group'
+                  a(href=resourceGroup.elementLink)!= resourceGroup.name || 'Resource Group'
                 .collapse-content
                   ul
                     each item in resourceGroup.navItems || []
