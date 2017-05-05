@@ -18,7 +18,7 @@ mixin Badge(method)
             span.badge.delete: include icons/close.jade
         default
             span.badge: include icons/target.jade
-            
+
 mixin Nav()
     //- Draw a navigation bar, which includes links to individual
     //- resources and actions.
@@ -27,7 +27,7 @@ mixin Nav()
             .resource-group
                 .heading
                   .chevron
-                    i.open.fa.fa-angle-down
+                    include icons/chevron-down.jade
                   a(href='#top') Overview
                 .collapse-content
                   ul: each item in self.api.navItems
@@ -37,7 +37,7 @@ mixin Nav()
             .resource-group
                 .heading
                   .chevron
-                    i.open.fa.fa-angle-down
+                    include icons/chevron-down.jade
                   a(href=resourceGroup.elementLink)!= resourceGroup.name || 'Resource Group'
                 .collapse-content
                   ul

@@ -248,7 +248,7 @@ nav {
 
         a {
             display: block;
-            font-size: 13 * @font-size / 14;
+            font-size: @font-size;
             color: fade(@text-color, 70%);
             padding: (2 * @padding / 3) @padding;
             border-top: 1px solid @group-border-color;
@@ -256,6 +256,7 @@ nav {
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            position: relative;
 
             &:hover {
               text-decoration: @nav-hover-text-decoration;
@@ -326,7 +327,11 @@ nav {
     color: @group-text-color;
     background-color: @group-title-background-color;
     border-radius: 10px;
-    margin: @badge-margin;
+    // margin: @badge-margin;
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    margin-top: -15px;
 
     &.get {
       color: @get-badge-text-color;
