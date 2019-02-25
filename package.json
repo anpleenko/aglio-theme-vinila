@@ -10,8 +10,9 @@
     "precoveralls": "npm run coverage",
     "coveralls": "coveralls <coverage/lcov.info",
     "pretest": "npm run build",
-    "prepublish": "npm run build",
-    "postinstall": "node scripts/setup-cache.js"
+    "prepublish": "npm run snyk-protect; npm run build",
+    "postinstall": "node scripts/setup-cache.js",
+    "snyk-protect": "snyk protect"
   },
   "repository": {
     "type": "git",
@@ -43,7 +44,8 @@
     "markdown-it-container": "^2.0.0",
     "markdown-it-emoji": "^1.0.0",
     "moment": "^2.8.4",
-    "stylus": "^0.54.5"
+    "stylus": "^0.54.5",
+    "snyk": "^1.134.2"
   },
   "devDependencies": {
     "chai": "^3.0.0",
@@ -52,5 +54,6 @@
     "istanbul": "^0.4.5",
     "mocha": "^3.3.0",
     "rimraf": "^2.4.1"
-  }
+  },
+  "snyk": true
 }
